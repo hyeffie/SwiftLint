@@ -17,9 +17,9 @@ struct ConditionListRule: Rule {
             Example("guard a, b else { return }"),
         ],
         triggeringExamples: [
-            Example("if ↓a && ↓b {}"),
-            Example("while ↓(a || b) && ↓c {}"),
-            Example("guard ↓a && ↓b else { return }"),
+            Example("if a ↓&& b {}"),
+            Example("while (a || b) ↓&& c {}"),
+            Example("guard a ↓&& b else { return }"),
         ]
     )
 }
