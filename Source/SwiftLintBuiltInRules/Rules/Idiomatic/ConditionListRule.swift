@@ -29,25 +29,25 @@ private extension ConditionListRule {
         override func visitPost(_ node: IfExprSyntax) {
             checkCondition(node.conditions)
         }
-        
+
         override func visitPost(_ node: WhileStmtSyntax) {
             checkCondition(node.conditions)
         }
-        
+
         override func visitPost(_ node: GuardStmtSyntax) {
             checkCondition(node.conditions)
         }
-        
+
         private func checkCondition(_ conditions: ConditionElementListSyntax) {
             guard conditions.count == 1,
                   let firstCondition = conditions.first,
                   case .expression(let expr) = firstCondition.condition else {
                 return
             }
-            
+
             findLogicalAndExpressions(in: expr)
         }
-        
+
         private func findLogicalAndExpressions(in expr: ExprSyntax) {
             if let binaryExpr = expr.as(InfixOperatorExprSyntax.self),
                let op = binaryExpr.operator.as(BinaryOperatorExprSyntax.self),
