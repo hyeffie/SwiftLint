@@ -26,6 +26,7 @@ public let builtInRules: [any Rule.Type] = [
     CommentSpacingRule.self,
     CompilerProtocolInitRule.self,
     ComputedAccessorsOrderRule.self,
+    ConditionListRule.self,
     ConditionalReturnsOnNewlineRule.self,
     ContainsOverFilterCountRule.self,
     ContainsOverFilterIsEmptyRule.self,

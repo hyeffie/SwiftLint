@@ -151,6 +151,12 @@ final class ComputedAccessorsOrderRuleGeneratedTests: SwiftLintTestCase {
     }
 }
 
+final class ConditionListRuleGeneratedTests: SwiftLintTestCase {
+    func testWithDefaultConfiguration() {
+        verifyRule(ConditionListRule.description)
+    }
+}
+
 final class ConditionalReturnsOnNewlineRuleGeneratedTests: SwiftLintTestCase {
     func testWithDefaultConfiguration() {
         verifyRule(ConditionalReturnsOnNewlineRule.description)

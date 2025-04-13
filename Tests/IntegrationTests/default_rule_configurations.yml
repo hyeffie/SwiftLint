@@ -129,6 +129,11 @@ computed_accessors_order:
   meta:
     opt-in: false
     correctable: false
+condition_list:
+  severity: warning
+  meta:
+    opt-in: true
+    correctable: false
 conditional_returns_on_newline:
   severity: warning
   if_only: false
